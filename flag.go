@@ -3,20 +3,20 @@
 // license that can be found in the LICENSE file.
 
 /*
-Package flag is a drop-in replacement for Go's flag package, implementing
+Package pflag is a drop-in replacement for Go's flag package, implementing
 POSIX/GNU-style --flags.
 
-flag is compatible with the GNU extensions to the POSIX recommendations
+pflag is compatible with the GNU extensions to the POSIX recommendations
 for command-line options. See
 http://www.gnu.org/software/libc/manual/html_node/Argument-Syntax.html
 
 Usage:
 
-flag is a drop-in replacement of Go's native flag package. If you import
-flag under the name "flag" then all code should continue to function
+pflag is a drop-in replacement of Go's native flag package. If you import
+pflag under the name "flag" then all code should continue to function
 with no changes.
 
-	import flag "github.com/gostores/flag"
+	import flag "github.com/gostores/pflag"
 
 There is one exception to this: if you directly instantiate the Flag struct
 there is one more field "Shorthand" that you will need to set.
@@ -51,7 +51,7 @@ After parsing, the arguments after the flag are available as the
 slice flag.Args() or individually as flag.Arg(i).
 The arguments are indexed from 0 through flag.NArg()-1.
 
-The flag package also defines some new functions that are not in flag,
+The pflag package also defines some new functions that are not in flag,
 that give one-letter shorthands for flags. You can use these by appending
 'P' to the name of any function that defines a flag.
 	var ip = flag.IntP("flagname", "f", 1234, "help message")
@@ -96,7 +96,7 @@ in a command-line interface. The methods of FlagSet are
 analogous to the top-level functions for the command-line
 flag set.
 */
-package flag
+package pflag
 
 import (
 	"bytes"
@@ -109,7 +109,7 @@ import (
 )
 
 // ErrHelp is the error returned if the flag -help is invoked but no such flag is defined.
-var ErrHelp = errors.New("flag: help requested")
+var ErrHelp = errors.New("pflag: help requested")
 
 // ErrorHandling defines how to handle flag parsing errors.
 type ErrorHandling int

@@ -1,8 +1,4 @@
-// Copyright 2009 The Go Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
-package flag
+package pflag
 
 import (
 	"bytes"
@@ -50,7 +46,7 @@ func (v *triStateValue) String() string {
 	return strconv.FormatBool(*v == triStateTrue)
 }
 
-// The type of the flag as required by the flag.Value interface
+// The type of the flag as required by the pflag.Value interface
 func (v *triStateValue) Type() string {
 	return "version"
 }
