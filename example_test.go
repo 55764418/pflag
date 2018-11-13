@@ -3,7 +3,7 @@ package pflag_test
 import (
 	"fmt"
 
-	"github.com/gostores/pflag"
+	"github.com/govenue/pflag"
 )
 
 func ExampleShorthandLookup() {

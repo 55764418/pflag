@@ -4,11 +4,11 @@ pflag is available using the standard `go get` command.
 
 Install by running:
 
-    go get github.com/gostores/pflag
+    go get github.com/govenue/pflag
 
 Run tests by running:
 
-    go test github.com/gostores/pflag
+    go test github.com/govenue/pflag
 
 ## Usage
 
@@ -17,7 +17,7 @@ pflag under the name "flag" then all code should continue to function
 with no changes.
 
 ``` go
-import flag "github.com/gostores/pflag"
+import flag "github.com/govenue/pflag"
 ```
 
 There is one exception to this: if you directly instantiate the Flag struct
@@ -253,7 +253,7 @@ to support flags defined by third-party dependencies (e.g. `golang/glog`).
 ```go
 import (
 	goflag "flag"
-	flag "github.com/gostores/pflag"
+	flag "github.com/govenue/pflag"
 )
 
 var ip *int = flag.Int("flagname", 1234, "help message for flagname")
@@ -269,8 +269,8 @@ func main() {
 You can see the full reference documentation of the pflag package
 [at godoc.org][3], or through go's standard documentation system by
 running `godoc -http=:6060` and browsing to
-[http://localhost:6060/pkg/github.com/gostores/pflag][2] after
+[http://localhost:6060/pkg/github.com/govenue/pflag][2] after
 installation.
 
-[2]: http://localhost:6060/pkg/github.com/gostores/pflag
-[3]: http://godoc.org/github.com/gostores/pflag
+[2]: http://localhost:6060/pkg/github.com/govenue/pflag
+[3]: http://godoc.org/github.com/govenue/pflag
